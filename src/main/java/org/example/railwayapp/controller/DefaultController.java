@@ -17,7 +17,7 @@ public class DefaultController {
 
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
 
-        // Проверяем наличие ролей "ROLE_ADMIN" или "ROLE_USER"
+        // Проверяем наличие ролей "ROLE_ADMIN" или "ROLE_USER".
         boolean isAdmin = authorities.stream()
                 .anyMatch(auth -> auth.getAuthority().equals("ROLE_ADMIN"));
         boolean isUser = authorities.stream()
