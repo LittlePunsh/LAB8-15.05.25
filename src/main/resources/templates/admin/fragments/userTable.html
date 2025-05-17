@@ -1,5 +1,5 @@
-<!-- src/main/resources/templates/admin/fragments/userTable.html -->
-<div th:fragment="userSection"> <!-- Определяем фрагмент с именем "userSection" -->
+
+<div th:fragment="userSection">
     <h2 class="mt-5 mb-3">Управление Пользователями</h2>
 
     <!-- Кнопка Добавить Пользователя -->
@@ -22,10 +22,8 @@
             <td th:text="${user.email}">email@example.com</td>
             <td th:text="${user.role}">user</td>
             <td>
-                <!-- Кнопка Редактировать пользователя -->
                 <a th:href="@{/admin/users/edit/{id}(id=${user.id})}" class="btn btn-sm btn-warning">Редактировать</a>
 
-                <!-- Форма для кнопки Удалить пользователя (мягкое удаление) -->
                 <form th:action="@{/admin/users/delete/{id}(id=${user.id})}" method="post" style="display:inline;">
                     <button type="submit" class="btn btn-sm btn-danger"
                             th:disabled="${user.id == loggedInUser.id}"

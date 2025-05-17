@@ -17,9 +17,8 @@ public class AdminTripDto {
     private String passengerName;
     private String seatNumber;
 
-    // === ДОБАВЛЕНО ===
-    private Long ticketId; // Добавляем ID билета
-    // =================
+    private Long ticketId;
+
 
 
     public AdminTripDto(Trip trip, Ticket ticket) {
@@ -33,15 +32,12 @@ public class AdminTripDto {
         if (ticket != null) {
             this.passengerName = ticket.getPassengerName();
             this.seatNumber = ticket.getSeatNumber();
-            // === ДОБАВЛЕНО ===
-            this.ticketId = ticket.getTicketId(); // Заполняем ID билета, если билет есть
-            // =================
+
+            this.ticketId = ticket.getTicketId();
         } else {
             this.passengerName = "---";
             this.seatNumber = "---";
-            // === ДОБАВЛЕНО ===
-            this.ticketId = null; // Нет билета, нет ID
-            // =================
+            this.ticketId = null;
         }
     }
 }

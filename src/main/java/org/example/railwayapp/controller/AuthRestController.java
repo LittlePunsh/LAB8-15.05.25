@@ -37,7 +37,6 @@ public class AuthRestController {
                 return ResponseEntity.ok(response);
             }
         }
-        // Если пользователь не найден или пароль неверный
         response.setSuccess(false);
         response.setMessage("Invalid username or password");
         response.setRole(null);

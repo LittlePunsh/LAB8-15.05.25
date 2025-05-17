@@ -15,8 +15,8 @@
     <description>Railway Station Application with Spring Boot</description>
 
     <properties>
-        <!-- JDK 22 -->
-        <java.version>22</java.version>
+        <!-- JDK 19 -->
+        <java.version>19</java.version>
     </properties>
 
     <dependencies>

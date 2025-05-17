@@ -1,12 +1,12 @@
 package org.example.railwayapp.controller;
 
-import org.springframework.security.core.Authentication; // Импорт для получения информации об аутентификации
-import org.springframework.security.core.GrantedAuthority; // Импорт для работы с ролями
-import org.springframework.security.core.context.SecurityContextHolder; // Импорт для доступа к контексту безопасности
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.Collection; // Импорт для Collection
+import java.util.Collection;
 
 @Controller
 public class DefaultController {
